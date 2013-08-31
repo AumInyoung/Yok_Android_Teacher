@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1280" 
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90" />
+
+    <TextView
+        android:id="@+id/mission_current_mission"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="160"
+        android:text="current mission : asdf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:weightSum="768">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="300"
+            android:text="미션기간" />
+        <EditText
+            android:id="@+id/mission_length" 
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:singleLine="true"
+            android:inputType="numberDecimal" />
+		<TextView
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:text="일"/>
+		e
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="미션"
+        />
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="500"
+        android:weightSum="768" 
+        android:gravity="center">
+	    <EditText
+	        android:id="@+id/mission_content" 
+	        android:layout_height="match_parent"
+	        android:layout_width="0dp"
+	        android:layout_weight="700"/>
+	</LinearLayout>
+	
+    <Button 
+        android:id="@+id/mission_send"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

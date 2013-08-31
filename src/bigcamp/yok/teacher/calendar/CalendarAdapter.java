@@ -1,28 +1,30 @@
-package bigcamp.yok.teacher;
+package bigcamp.yok.teacher.calendar;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import bigcamp.yok.teacher.R;
+import bigcamp.yok.teacher.R.id;
+import bigcamp.yok.teacher.R.layout;
+
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class CalendarAdapter extends ArrayAdapter<Integer> {
+public class CalendarAdapter extends ArrayAdapter<CalendarItem> {
 
 	Context context = null;
-	ArrayList<Integer> data = null; 
+	ArrayList<CalendarItem> data = null; 
 	Calendar calendar = null;
 	LayoutInflater inflater = null; 
-	int firstDayOfMonth = 0; 
+	public static int firstDayOfMonth = 0; 
 
-	public CalendarAdapter(Context context, ArrayList<Integer> objects) {
+	
+	public CalendarAdapter(Context context, ArrayList<CalendarItem> objects) {
 		super(context, 0, objects);
 		// TODO Auto-generated constructor stub
 
@@ -76,7 +78,7 @@ public class CalendarAdapter extends ArrayAdapter<Integer> {
 				day.setTextColor(Color.BLUE);
 			}
 			
-			slang.setText(1+"");
+			slang.setText(data.get(pos-firstDayOfMonth).getSlangCnt()+"");
 
 		}
 
